@@ -40,7 +40,7 @@ export const Quiz = () => {
           {Questions[currentQuestion].optionD}
         </button>
       </div>
-      {currentQuestion == Questions.length - 1 ? (
+      {currentQuestion === Questions.length - 1 ? (
         <button className="Next" onClick={finishQuiz}>Finish Quiz</button>
       ) : (
         <button className="Next" onClick={nextQuestion}>Next Question</button>

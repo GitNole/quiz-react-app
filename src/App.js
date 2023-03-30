@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState } from "react";
 import "./App.css";
 import { EndScreen } from "./Components/EndScreen";
 import { MainMenu } from "./Components/MainMenu";
