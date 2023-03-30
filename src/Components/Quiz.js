@@ -6,7 +6,7 @@ export const Quiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [optionChosen, setOptionChosen] = useState("");
 
-  const { score, setScore, setGameState} = useContext(QuizContext);
+  const { score, setScore, setGameState } = useContext(QuizContext);
 
   const nextQuestion = () => {
     if (Questions[currentQuestion].answer === optionChosen) {
@@ -17,11 +17,11 @@ export const Quiz = () => {
 
   const finishQuiz = () => {
     if (Questions[currentQuestion].answer === optionChosen) {
-        setScore(score + 1);
-      }
+      setScore(score + 1);
+    }
 
-      setGameState('endScreen')
-  }
+    setGameState("endScreen");
+  };
 
   return (
     <div className="Quiz">
@@ -40,8 +40,11 @@ export const Quiz = () => {
           {Questions[currentQuestion].optionD}
         </button>
       </div>
-    {currentQuestion == Questions.length - 1 ? <button onClick={finishQuiz}>Finish Quiz</button> : <button onClick={nextQuestion}>Next Question</button> }
-    
+      {currentQuestion == Questions.length - 1 ? (
+        <button className="Next" onClick={finishQuiz}>Finish Quiz</button>
+      ) : (
+        <button className="Next" onClick={nextQuestion}>Next Question</button>
+      )}
     </div>
   );
 };

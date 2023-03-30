@@ -34,6 +34,7 @@
   .Quiz {
     width: 500px;
     height: 500px;
+    padding: 0 30px;
     border-radius: 10px;
     background-color: lightseagreen;
     display: flex;
@@ -63,5 +64,26 @@
   
   h3 {
     color: #ffffff;
-  
   }
+
+  .options button:hover{
+    background-color:#148552;
+    color: #fff;
+}
+
+.options button:focus{
+    background-color: #148552;
+    border: 1px solid #000;
+    color: #fff;
+}
+
+.Next{
+    background-color:#148552;
+    color: #fff;
+    margin-top: 20px;
+}
+ 
+.EndScreen button:hover, .Menu button:hover{
+background-color:#148552;
+    color: #fff;
+}
